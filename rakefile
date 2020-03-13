@@ -1,0 +1,36 @@
+
+desc "sending email"
+task :sendmail do 
+  puts "寄信中，請稍候..."
+  sleep 3
+  puts "搞定了！"
+end
+
+# 用 rake 寄信\ (定時寄信) / 產生報表
+
+namespace(:db) do
+  desc "資料庫..."
+  task(:migrate) do
+    # book.each do
+    #end
+    puts "整理資料庫"
+  end
+end
+
+
+# ex:設計程式的時候 可以給他個小遊戲讓他不會離開
+
+desc "open a door"
+task :open_door do
+  puts "開門"
+end
+#如果有 desc 才會有rake -T 在上面顯示
+
+
+desc "go to a toliet"
+task :goto_toliet => :open_door do
+  puts "上廁所"
+end
+# 
+
+
